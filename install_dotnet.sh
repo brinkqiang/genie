@@ -9,6 +9,7 @@ pushd ~/
 if [ -f /etc/redhat-release ]; then
   sudo yum install -y centos-release-dotnet
   sudo yum install -y rh-dotnet50-dotnet
+  sudo yum install -y daemonize
 
   if [ -f ~/.zshrc ]; then
     sed -i '/source \/opt\/rh\/rh-dotnet50\/enable/d' ~/.zshrc
@@ -29,6 +30,7 @@ if [ -f /etc/lsb-release ]; then
     sudo apt-get install -y apt-transport-https
     sudo apt-get update
     sudo apt-get install -y dotnet-sdk-5.0
+    sudo apt-get install -y daemonize
 fi
 
 popd
