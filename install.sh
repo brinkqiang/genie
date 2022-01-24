@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -f /etc/redhat-release ]; then
-    sudo yum install centos-release-dotnet
-    sudo yum install rh-dotnet50-dotnet
+    sudo yum install -y centos-release-dotnet
+    sudo yum install -y rh-dotnet50-dotnet
 fi
 
 if [ -f /etc/lsb-release ]; then
