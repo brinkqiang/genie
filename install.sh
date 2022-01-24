@@ -1,22 +1,8 @@
 #!/bin/bash
 
 if [ -f /etc/redhat-release ]; then
-    # su root
-    wget --no-check-certificate -O /opt/bbr.sh https://github.com/brinkqiang/across/raw/master/bbr.sh
-    chmod 755 /opt/bbr.sh
-    /opt/bbr.sh
-
-    # reboot
-    # sysctl net.ipv4.tcp_available_congestion_control
-    # sysctl net.ipv4.tcp_congestion_control
-    # sysctl net.core.default_qdisc
-    # lsmod | grep bbr
-
-    # view
-    # net.ipv4.tcp_available_congestion_control = bbr cubic reno
-    # net.ipv4.tcp_congestion_control = bbr
-    # net.core.default_qdisc = fq
-    # tcp_bbr                20480  3
+    sudo yum install centos-release-dotnet
+    sudo yum install rh-dotnet50-dotnet
 fi
 
 if [ -f /etc/lsb-release ]; then
