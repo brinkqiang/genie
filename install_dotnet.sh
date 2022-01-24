@@ -30,7 +30,12 @@ if [ -f /etc/lsb-release ]; then
     sudo apt-get install -y apt-transport-https
     sudo apt-get update
     sudo apt-get install -y dotnet-sdk-5.0
+
     sudo apt-get install -y daemonize
+    # for daemonize
+    
+    sudo apt-get install -y systemd-container
+    # for machinectl
 fi
 
 popd
